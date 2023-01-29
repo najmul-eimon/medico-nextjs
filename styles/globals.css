@@ -1,107 +1,357 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+/* general css */
+body {
+  width: 100%;
+  max-width: 100%;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ul li,
+ol li {
+  list-style: none;
 }
 
-a {
-  color: inherit;
+a,
+p,
+i,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-decoration: none;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+select,
+input {
+  border: 0;
+  outline: none;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* play button animation */
+@keyframes play-animation {
+  from {
+    opacity: 1;
+    transform: scale(1);
   }
+
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.play-animation{
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+/* preloader animation */
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+/* custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-moz-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.custom-scrollbar::-moz-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-scrollbar::-moz-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* scrollbar hide */
+.scrollbar-hidden::-webkit-scrollbar{
+  display: none;
+  width: 0;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden{
+  scrollbar-width: none;
+}
+
+/* login */
+.login .left-bar{
+  background: linear-gradient(159.99deg, #045AB5 0%, #0495B5 100%);
+}
+
+/* navbar css */
+.nav-link.active {
+  @apply text-secondary;
+}
+
+/* why-we */
+.why-we {
+  background-image: linear-gradient(to right, rgba(49, 79, 162, 0.05) 55%, #37D6C9 55%);
+}
+
+@media screen and (max-width:767px) {
+  .why-we {
+    background-image: linear-gradient(to bottom, rgba(49, 79, 162, 0.05) 65%, #37D6C9 65%);
+  }
+}
+
+/* service */
+@media (min-width:1240px) and (max-width:1279px) {
+  .service-grid{
+    @apply !grid-cols-3;
+  }
+}
+
+/* department */
+.single-department:first-child{
+  @apply lg:border-r lg:border-b;
+}
+.single-department:nth-child(2){
+  @apply lg:border-b;
+}
+.single-department:nth-child(3){
+  @apply lg:border-l lg:border-b;
+}
+.single-department:nth-child(4){
+  @apply lg:border-r;
+}
+.single-department:nth-child(6){
+  @apply lg:border-l;
+}
+
+/* pricing */
+.pricing-card.active{
+  @apply bg-primary;
+}
+
+.pricing-card.active h4,
+.pricing-card.active h5,
+.pricing-card.active ul li i,
+.pricing-card.active ul li p{
+  @apply text-white;
+}
+
+.pricing-card.active h5{
+  @apply py-4 lg:py-6 xl:py-8;
+}
+
+.pricing-card.active ul{
+  @apply mb-4 lg:mb-6 xl:mb-8;
+}
+
+.pricing-card.active a{
+  @apply py-[6px] md:py-[10px] border border-white;
+}
+
+/* paginatioin */
+.pagination ul li .active{
+  @apply bg-secondary border-secondary text-white;
+}
+
+/* blog */
+.blog-filter-btns button.active{
+  @apply bg-secondary/10 text-secondary;
+}
+
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+
+/* appointment */
+
+.appointment .tab-list li h5,
+.appointment .tab-list li p{
+  opacity: 0.32;
+}
+
+.appointment .tab-list li.active h5,
+.appointment .tab-list li.active p{
+  opacity: 1;
+}
+
+.appointment .tab-list li.checked .check-dot{
+  @apply hidden;
+}
+
+.appointment .tab-list li.checked .checkmark{
+  @apply block;
+}
+
+
+.appointment .clinic-select input:checked + .clinic-location{
+  @apply border border-[#0683E3];
+}
+
+.appointment .department-select input:checked + .single-department,
+.appointment .doctor-select input:checked + .single-doctor{
+  @apply border border-primary;
+}
+
+.appointment .clinic-select input:checked + .clinic-location .active-check-mark,
+.appointment .department-select input:checked + .single-department .active-check-mark,
+.appointment .doctor-select input:checked + .single-doctor .active-check-mark{
+  @apply block;
+}
+
+.file-label{
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300000040' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 8px;
+}
+
+#tabs-nav .active{
+  @apply bg-secondary/10;
+}
+
+/* @media screen and (min-width:1024px) {
+  .map-bg{
+    background-image: url('assets/images/map.png');
+  }
+} */
+
+/* select-dropdown */
+.select-dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.select-dropdown::-moz-scrollbar {
+  width: 4px;
+}
+
+.select-dropdown::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.select-dropdown::-moz-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.select-dropdown::-moz-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* pagination */
+.pagination{
+  @apply flex items-center justify-center gap-[5px];
+}
+
+.pagination li a{
+  @apply inline-block h-8 w-8 capitalize rounded-lg border border-[#F1F1F1] bg-white text-center leading-8 text-[13px] font-medium text-[#333333];
+}
+
+.pagination li.active-page a{
+  @apply bg-secondary border-secondary text-white;
+}
+
+.pagination li.break a,
+.pagination li.previous a,
+.pagination li.next a{
+  @apply border-0;
+}
+
+.pagination li.disabled a{
+  @apply text-[#CCCCCC] cursor-default;
 }
