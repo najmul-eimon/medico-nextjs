@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import icu from '../../../assets/images/icu.jpg';
-import {counterData} from '../../../data/counter';
-import {features} from '../../../data/counter';
+import Link from 'next/link';
+import Image from 'next/image';
+import {counterData} from '@/data/counter';
+import {features} from '@/data/counter';
 import SingleCounter from './SingleCounter';
 import {FiCheck} from 'react-icons/fi';
 
@@ -27,13 +27,13 @@ const WhyUs = () => {
             </ul>
 
             <div className="text-center md:text-left">
-              <Link to="/appointment" className="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</Link>
+              <Link href="/appointment" className="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</Link>
             </div>
           </div>
 
           {/* image */}
           <div className="lg:col-span-5 h-[196px] sm:h-[300px] md:h-auto">
-            <img src={icu} alt="ICU" className="h-full w-full object-cover" />
+            <Image src="/images/icu.jpg" alt="ICU" width={526} height={634} className="h-full w-full object-cover" />
           </div>
 
           {/* counter */}

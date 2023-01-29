@@ -1,17 +1,7 @@
-import image1 from '../assets/images/doctors/full1.jpg';
-import image2 from '../assets/images/doctors/full2.jpg';
-import image3 from '../assets/images/doctors/full3.jpg';
-import image4 from '../assets/images/doctors/full4.jpg';
-import image5 from '../assets/images/doctors/full5.jpg';
-import image6 from '../assets/images/doctors/full6.jpg';
-import image7 from '../assets/images/doctors/full7.jpg';
-import image8 from '../assets/images/doctors/full8.jpg';
-import image9 from '../assets/images/doctors/full9.jpg';
-
 export const doctors = [
   {
     id: 1,
-    image: image1,
+    image: "/images/doctors/full1.jpg",
     doctorName: "Dr. Maverick Ludeman",
     specialist: "Cardiologist",
     phone: "+1 888 215 365",
@@ -26,7 +16,7 @@ export const doctors = [
   },
   {
     id: 2,
-    image: image2,
+    image: "/images/doctors/full2.jpg",
     doctorName: "Dr. Lane Toki",
     specialist: "General Surgery",
     phone: "+1 888 215 365",
@@ -41,7 +31,7 @@ export const doctors = [
   },
   {
     id: 3,
-    image: image3,
+    image: "/images/doctors/full3.jpg",
     doctorName: "Dr. Reese Blom",
     specialist: "Psychiatry",
     phone: "+1 888 215 365",
@@ -56,7 +46,7 @@ export const doctors = [
   },
   {
     id: 4,
-    image: image4,
+    image: "/images/doctors/full4.jpg",
     doctorName: "Dr. Dylan Scroger",
     specialist: "Medicine",
     phone: "+1 888 215 365",
@@ -71,7 +61,7 @@ export const doctors = [
   },
   {
     id: 5,
-    image: image5,
+    image: "/images/doctors/full5.jpg",
     doctorName: "Dr. Kendrick",
     specialist: "Physology",
     phone: "+1 888 215 365",
@@ -86,7 +76,7 @@ export const doctors = [
   },
   {
     id: 6,
-    image: image6,
+    image: "/images/doctors/full6.jpg",
     doctorName: "Dr. Johnny Lucer",
     specialist: "Cardiologist",
     phone: "+1 888 215 365",
@@ -101,7 +91,7 @@ export const doctors = [
   },
   {
     id: 7,
-    image: image7,
+    image: "/images/doctors/full7.jpg",
     doctorName: "Dr. Autumn Mangino",
     specialist: "Orthopaedics",
     phone: "+1 888 215 365",
@@ -116,7 +106,7 @@ export const doctors = [
   },
   {
     id: 8,
-    image: image8,
+    image: "/images/doctors/full8.jpg",
     doctorName: "Dr. Braden Bluth",
     specialist: "General Surgery",
     phone: "+1 888 215 365",
@@ -131,7 +121,7 @@ export const doctors = [
   },
   {
     id: 9,
-    image: image9,
+    image: "/images/doctors/full9.jpg",
     doctorName: "Dr. Carrie Schinner",
     specialist: "Ear, Nose and Throat",
     phone: "+1 888 215 365",
@@ -146,7 +136,7 @@ export const doctors = [
   },
   {
     id: 10,
-    image: image3,
+    image: "/images/doctors/full3.jpg",
     doctorName: "Dr. Reese Blom",
     specialist: "Psychiatry",
     phone: "+1 888 215 365",
@@ -161,7 +151,7 @@ export const doctors = [
   },
   {
     id: 11,
-    image: image5,
+    image: "/images/doctors/full5.jpg",
     doctorName: "Dr. Kendrick",
     specialist: "Physology",
     phone: "+1 888 215 365",
@@ -176,7 +166,7 @@ export const doctors = [
   },
   {
     id: 12,
-    image: image7,
+    image: "/images/doctors/full7.jpg",
     doctorName: "Dr. Autumn Mangino",
     specialist: "Orthopaedics",
     phone: "+1 888 215 365",

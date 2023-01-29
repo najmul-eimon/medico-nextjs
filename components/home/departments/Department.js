@@ -1,5 +1,5 @@
 import SingleDepartment from './SingleDepartment';
-import {departments} from '../../../data/department';
+import {departments} from '@/data/department';
 import Title from '../../shared/Title';
 
 const Department = () => {

@@ -1,16 +1,22 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import menuIcon from '../../public/images/svg/menu.svg';
 import {IoClose} from 'react-icons/io5';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const router = useRouter();
+  const fullPath = router.pathname.split('/');
+  const basePath = fullPath[1];
 
   useEffect(() => {
     const body = document.querySelector('body');
     openMenu ? body.style.overflow = "hidden" : body.style.overflow = "visible";
   }, [openMenu]);
+
+  const menuItems = ["home", "about", "service", "doctors", "blog"];
 
   return (
     <header className="py-2 xl:py-4 w-full fixed left-0 top-0 z-40 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
@@ -43,21 +49,13 @@ const Header = () => {
 
               {/* menu items */}
               <ul className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-7">
-                <li>
-                  <Link href="/" end onClick={() => setOpenMenu(false)} className="nav-link inlione-block text-base text-primary-text">Home</Link>
-                </li>
-                <li>
-                  <Link href="/about" onClick={() => setOpenMenu(false)} className="nav-link inlione-block text-base text-primary-text">About</Link>
-                </li>
-                <li>
-                  <Link href="/service" onClick={() => setOpenMenu(false)} className="nav-link inlione-block text-base text-primary-text">Services</Link>
-                </li>
-                <li>
-                  <Link href="/doctors" onClick={() => setOpenMenu(false)} className="nav-link inlione-block text-base text-primary-text">Doctors</Link>
-                </li>
-                <li>
-                  <Link href="/blog" onClick={() => setOpenMenu(false)} className="nav-link inlione-block text-base text-primary-text">Blog</Link>
-                </li>
+                {
+                  menuItems.map((item, i) => (
+                    <li key={i}>
+                      <Link href={item === "home" ? "/" : item} end onClick={() => setOpenMenu(false)} className={`${basePath === (item === "home" ? "" : item) ? "active" : ""} nav-link inlione-block text-base text-primary-text capitalize`}>{item}</Link>
+                    </li>
+                  ))
+                }
                 <li>
                   <Link href="/login" onClick={() => setOpenMenu(false)} className="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</Link>
                 </li>

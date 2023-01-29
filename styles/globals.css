@@ -302,11 +302,11 @@ a:focus {
   @apply bg-secondary/10;
 }
 
-/* @media screen and (min-width:1024px) {
+@media screen and (min-width:1024px) {
   .map-bg{
-    background-image: url('assets/images/map.png');
+    background-image: url('/images/map.png');
   }
-} */
+}
 
 /* select-dropdown */
 .select-dropdown::-webkit-scrollbar {

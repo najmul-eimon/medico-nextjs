@@ -1,7 +1,4 @@
-import mockUp from '../../assets/images/mock-up.png';
-import playStore from '../../assets/images/play-store.png';
-import appleStore from '../../assets/images/app-store.png';
-import { Link } from 'react-router-dom';
+import Image from 'next/image';
 
 const DownloadApp = () => {
   return (
@@ -11,21 +8,21 @@ const DownloadApp = () => {
           <div className="sm:col-span-5">
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl leading-9 md:leading-[44px] lg:leading-[54px] 2xl:leading-[72px] font-bold text-center sm:hidden">Download our app and set appointment</h2>
             <div className="w-full text-center my-10 md:my-0">
-              <img src={mockUp} alt="Mock up" className="mx-auto"/>
+              <Image src="/images/mock-up.png" alt="Mock up" width={172} height={337} className="mx-auto"/>
             </div>
           </div>
           <div className="sm:col-span-7">
             <h2 className="text-white pb-10 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl leading-9 md:leading-[44px] lg:leading-[54px] 2xl:leading-[72px] font-bold hidden sm:block">Download our app and set appointment</h2>
             <ul className="flex flex-col md:flex-row items-center sm:items-start md:items-center gap-4 lg:gap-10">
               <li>
-                <Link to="/" className="rounded-[10px] overflow-hidden">
-                  <img src={playStore} className="md:w-[170px] lg:w-auto" alt="Play store"/>
-                </Link>
+                <a href="#!" className="rounded-[10px] overflow-hidden">
+                  <Image src="/images/play-store.png" width={215} height={70} className="md:w-[170px] lg:w-auto" alt="Play store"/>
+                </a>
               </li>
               <li>
-                <Link to="/" className="rounded-[10px] overflow-hidden">
-                  <img src={appleStore} className="md:w-[170px] lg:w-auto" alt="App store"/>
-                </Link>
+                <a href="#!" className="rounded-[10px] overflow-hidden">
+                  <Image src="/images/app-store.png" width={215} height={70} className="md:w-[170px] lg:w-auto" alt="App store"/>
+                </a>
               </li>
             </ul>
           </div>
