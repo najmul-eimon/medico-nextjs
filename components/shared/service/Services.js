@@ -2,7 +2,7 @@ import {services} from '@/data/services';
 import Title from '../Title';
 import SingleService from './SingleService';
 
-const Service = () => {
+const Services = () => {
   return (
     <section className="service py-10 lg:py-16">
       <div className="container">
@@ -20,4 +20,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default Services;

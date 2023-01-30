@@ -1,11 +1,11 @@
 import AboutUs from '@/components/about/AboutUs';
 import CertifiedDoctors from '@/components/about/CertifiedDoctors';
 import History from '@/components/about/history/History';
-import Service from '@/components/shared/service/Service';
+import Service from '@/components/shared/service/Services';
 import WhyUs from '@/components/shared/whyUs/WhyUs';
 import Head from 'next/head';
 
-const about = () => {
+const About = () => {
   return (
     <>
       <Head>
@@ -14,6 +14,7 @@ const about = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <main className="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-[107px]">
         <AboutUs/>
         <Service/>
@@ -25,4 +26,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About;

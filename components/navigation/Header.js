@@ -52,7 +52,7 @@ const Header = () => {
                 {
                   menuItems.map((item, i) => (
                     <li key={i}>
-                      <Link href={item === "home" ? "/" : item} end onClick={() => setOpenMenu(false)} className={`${basePath === (item === "home" ? "" : item) ? "active" : ""} nav-link inlione-block text-base text-primary-text capitalize`}>{item}</Link>
+                      <Link href={item === "home" ? "/" : `/${item}`} end onClick={() => setOpenMenu(false)} className={`${basePath === (item === "home" ? "" : item) ? "active" : ""} nav-link inlione-block text-base text-primary-text capitalize`}>{item}</Link>
                     </li>
                   ))
                 }

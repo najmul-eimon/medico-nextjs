@@ -1,7 +1,7 @@
 import Banner from '@/components/home/Banner';
 import Department from '@/components/home/departments/Department';
 import DownloadApp from '@/components/home/DownloadApp';
-import Service from '@/components/shared/service/Service';
+import Service from '@/components/shared/service/Services';
 import WhyUs from '@/components/shared/whyUs/WhyUs';
 import Head from 'next/head';
 
@@ -14,6 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-0">
         <Banner/>
         <Service/>

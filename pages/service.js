@@ -1,10 +1,10 @@
 import Pricing from "@/components/service/pricing/Pricing";
 import ServiceIntro from "@/components/service/ServiceIntro";
 import Video from "@/components/service/video/Video";
-import Service from "@/components/shared/service/Service";
+import Services from "@/components/shared/service/Services";
 import Head from "next/head";
 
-const service = () => {
+const Service = () => {
   return (
     <>
       <Head>
@@ -13,6 +13,7 @@ const service = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <main className="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-[83px]">
         {/* page title */}
         <div className="page-title pt-6 lg:pt-12 pb-3 lg:pb-6">
@@ -22,7 +23,7 @@ const service = () => {
         </div>
 
         <ServiceIntro/>
-        <Service/>
+        <Services/>
         <Video/>
         <Pricing/>
       </main>
@@ -30,4 +31,4 @@ const service = () => {
   )
 }
 
-export default service;
+export default Service;
