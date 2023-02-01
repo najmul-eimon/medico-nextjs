@@ -99,9 +99,6 @@ a:focus {
 }
 
 /* scroll Top Button */
-.scrollTopButton{
-  @apply fixed bottom-10 right-5 z-50 h-10 w-10 flex items-center justify-center bg-secondary text-white text-xl rounded-full transition-all duration-300 scale-0;
-}
 .scrollTopButton.show{
   @apply scale-100;
 }

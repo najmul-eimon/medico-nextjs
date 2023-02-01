@@ -1,7 +1,7 @@
-import {doctors} from "../../data/doctors";
+import {doctors} from "@/data/doctors";
+import Image from "next/image";
 import AppointmentTitle from "./AppointmentTitle";
 import StepButtons from "./StepButtons";
-import activeCheck from '../../assets/images/svg/active-check.svg';
 
 function SelectDoctor({ search, handlePrev, handleNext }) {
 
@@ -19,11 +19,11 @@ function SelectDoctor({ search, handlePrev, handleNext }) {
                 <input type="radio" name="doctors" id={`doctor${id}`} className="absolute opacity-0 h-0 w-0"/>
                 
                 <div className="relative single-doctor rounded-[10px] overflow-hidden shadow-[0px_0px_20px_rgba(0,0,0,0.1)] transition-all duration-300 ease-linear hover:shadow hover:shadow-[rgba(0,0,0,0.1)]">
-                  <img src={activeCheck} className="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark"/>
+                  <Image src="/images/svg/active-check.svg" width={20} height={20} className="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark"/>
                   
                   {/* image */}
                   <div className="rounded-[10px] overflow-hidden h-[140px] lg:h-[222px]">
-                    <img src={image} className="w-full h-full object-cover" alt="Doctor"/>
+                    <Image src={image} width={215} height={222} className="w-full h-full object-cover" alt="Doctor"/>
                   </div>
 
                   {/* name */}

@@ -1,10 +1,9 @@
-import Layout from '@/layout/Layout'
-import '@/styles/globals.css'
+import '@/styles/globals.css';
+import "react-datepicker/dist/react-datepicker.css";
+import '@/styles/datepicker.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    // <Layout>
-      <Component {...pageProps} />
-    // </Layout>
+    <Component {...pageProps} />
   )
 }

@@ -1,7 +1,7 @@
 import AppointmentTitle from "./AppointmentTitle";
 import StepButtons from "./StepButtons";
-import location from "../../assets/images/location/clinic2.jpg";
 import { confirmationData } from "../../data/appointment";
+import Image from "next/image";
 
 function Confirmation({ search, handlePrev, handleNext }) {
   return (
@@ -14,7 +14,7 @@ function Confirmation({ search, handlePrev, handleNext }) {
         {/* card 1 */}
         <div className="w-full sm:w-[216px] rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
           <div className="rounded-br-[10px] overflow-hidden h-[76px] w-full">
-            <img src={location} className="w-full h-full object-cover" alt="Location"/>
+            <Image src="/images/location/clinic2.jpg" width={216} height={76} className="w-full h-full object-cover" alt="Location"/>
           </div>
           <div className="mt-[10px] p-[10px] text-center">
             <h5 className="text-sm lg:text-base font-semibold text-primary-text">Houston</h5>

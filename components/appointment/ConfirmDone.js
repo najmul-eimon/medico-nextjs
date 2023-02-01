@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import AppointmentTitle from './AppointmentTitle';
 
 function ConfirmDone({search}) {
@@ -22,7 +22,7 @@ function ConfirmDone({search}) {
 
       {/* buttons */}
       <div className="flex items-center justify-center lg:justify-end gap-4 w-full flex-shrink-0 mt-10 lg:mt-6">
-        <Link to="/" className="next-button inline-block px-9 text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Go Back to Home</Link>
+        <Link href="/" className="next-button inline-block px-9 text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Go Back to Home</Link>
       </div>
     </div>
   )

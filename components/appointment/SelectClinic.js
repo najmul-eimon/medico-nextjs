@@ -1,5 +1,5 @@
-import {locations} from "../../data/locations";
-import activeCheck from '../../assets/images/svg/active-check.svg';
+import {locations} from "@/data/locations";
+import Image from "next/image";
 import AppointmentTitle from "./AppointmentTitle";
 import StepButtons from "./StepButtons";
 
@@ -19,10 +19,10 @@ function SelectClinic({ search, handleNext }) {
                 <input type="radio" name="clinics" id={id} className="absolute opacity-0 h-0 w-0"/>
                 
                 <div className="relative rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] clinic-location transition-all duration-300 ease-linear hover:shadow hover:shadow-[rgba(0,0,0,0.1)]">
-                  <img src={activeCheck} className="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark"/>
+                  <Image src="/images/svg/active-check.svg" width={20} height={20} className="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark"/>
                   
                   <div className="rounded-[10px] rounded-bl-none overflow-hidden h-[180px]">
-                    <img src={image} className="w-full h-full object-cover" alt="Location"/>
+                    <Image src={image} width={215} height={180} className="w-full h-full object-cover" alt="Location"/>
                   </div>
                   <div className="mt-[10px] p-[10px] text-center">
                     <h4 className="text-sm lg:text-base font-semibold text-primary-text">{clinic}</h4>
