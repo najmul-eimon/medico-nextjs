@@ -52,12 +52,12 @@ const Header = () => {
                 {
                   menuItems.map((item, i) => (
                     <li key={i}>
-                      <Link href={item === "home" ? "/" : `/${item}`} end onClick={() => setOpenMenu(false)} className={`${basePath === (item === "home" ? "" : item) ? "active" : ""} nav-link inlione-block text-base text-primary-text capitalize`}>{item}</Link>
+                      <Link href={item === "home" ? "/" : `/${item}`} onClick={() => setOpenMenu(false)} className={`${basePath === (item === "home" ? "" : item) ? "active" : ""} nav-link inlione-block text-base text-primary-text capitalize`}>{item}</Link>
                     </li>
                   ))
                 }
                 <li>
-                  <Link href="/login" onClick={() => setOpenMenu(false)} className="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</Link>
+                  <Link href="/signin" onClick={() => setOpenMenu(false)} className="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</Link>
                 </li>
               </ul>
             </div>
