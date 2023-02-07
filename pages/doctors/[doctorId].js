@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 import { doctors } from "@/data/doctors";
 import SingleDoctorDetails from '@/components/singleDoctor/singleDoctorDetails/SingleDoctorDetails';
 import ClinicLocation from '@/components/singleDoctor/clinicLocation/ClinicLocation';
 import Layout from '@/layout/Layout';
 
-const DoctorDetails = ({param}) => {
+const DoctorDetails = ({doctor}) => {
   const [singleDoctor, setSingleDoctor] = useState({});
 
   useEffect(() => {
-    setSingleDoctor(doctors.find(({id}) => id === parseInt(param)));
-  },[param]);
+    setSingleDoctor(doctors.find(({id}) => id === parseInt(doctor)));
+  },[doctor]);
 
   return (
     <Layout title="Doctor Details">
@@ -27,7 +26,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      param
+      doctor: param
     }, 
   }
 }

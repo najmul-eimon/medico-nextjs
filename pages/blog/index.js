@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import AllBlogs from '@/components/blog/allBlogs/AllBlogs';
 import PopularBlogs from '@/components/blog/popularBlogs/PopularBlogs';
 import Layout from '@/layout/Layout';

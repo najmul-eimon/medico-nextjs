@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 import DetailsBlog from '@/components/blogDetails/DetailsBlog';
 import { blogs } from '@/data/blog';
 import FeaturedBlogs from '@/components/featuredBlogs/FeaturedBlogs';
 import Layout from '@/layout/Layout';
 
-const BlogDetails = ({param}) => {
+const BlogDetails = ({blog}) => {
   const [singleBlog, setSingleBlog] = useState({});
 
   useEffect(() => {
-    setSingleBlog(blogs.find(({id}) => id === parseInt(param)));
-  },[param]);
+    setSingleBlog(blogs.find(({id}) => id === parseInt(blog)));
+  },[blog]);
 
   return (
     <Layout title="Blog Details">
@@ -22,14 +21,15 @@ const BlogDetails = ({param}) => {
   )
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps = async (context) => {
   const param = context.params.blogId
 
   return {
     props: {
-      param
+      blog: param
     }, 
   }
 }
+
 
 export default BlogDetails;

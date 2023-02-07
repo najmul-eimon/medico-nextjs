@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import AllDoctors from '@/components/doctors/AllDoctors';
 import Layout from '@/layout/Layout';
 
