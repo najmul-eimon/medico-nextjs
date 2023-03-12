@@ -39,7 +39,7 @@ const SingleDoctor = ({data}) => {
       </ul>
 
       <p className="text-sm text-primary-text/60 pb-6">{details}</p>
-      <Link href={`/doctors/${id}`} className="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</Link>
+      <Link href={`/doctors/${id}`} className="inline-block py-3 px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</Link>
     </div>
   )
 }

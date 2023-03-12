@@ -19,7 +19,7 @@ function PatientDetails({search, handlePrev,handleNext}) {
   return (
     <div className="single-content card2 relative h-full w-full flex flex-col justify-between">
       {/* title */}
-      <AppointmentTitle title={"Details"} description={"Register if your new, otherwise just login"} search={search}/>
+      <AppointmentTitle title={"Details"} description={"Register if you're new, otherwise just login"} search={search}/>
 
       {/* content */}
       <div className="flex-grow">

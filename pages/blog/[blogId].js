@@ -27,7 +27,7 @@ export const getServerSideProps = async (context) => {
   return {
     props: {
       blog: param
-    }, 
+    },
   }
 }
 

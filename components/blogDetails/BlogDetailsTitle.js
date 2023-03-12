@@ -8,9 +8,9 @@ const BlogDetailsTitle = ({data}) => {
       <div className="lg:col-span-3">
         <h2 className="text-2xl leading-9 md:text-3xl md:leading-10 2xl:text-[40px] 2xl:leading-[60px] font-semibold text-primary-text">{blogTitle}</h2>
         <ul className="flex items-center divide-x-[1px] divide-[#E2E5F1] mt-4">
-          <li className="pr-[10px] sm:pr-4"><span className="inline-block whitespace-nowrap px-2 sm:px-6 rounded-[100px] bg-secondary text-white leading-6 text-xs">{category}</span></li>
-          <li className="px-[10px] sm:px-4"><p className="text-xs text-primary-text/40">{time} to read</p></li>
-          <li className="pl-[10px] sm:pl-4"><p className="text-xs text-primary-text/40">{date}</p></li>
+          <li className="pr-[14px] sm:pr-4"><span className="inline-block truncate px-6 rounded-[100px] bg-secondary text-white leading-6 text-xs max-w-[82px] sm:max-w-full">{category}</span></li>
+          <li className="px-[14px] sm:px-4"><p className="text-xs text-primary-text/40">{time} to read</p></li>
+          <li className="pl-[14px] sm:pl-4"><p className="text-xs text-primary-text/40">{date}</p></li>
         </ul>
       </div>
 

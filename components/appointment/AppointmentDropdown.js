@@ -7,7 +7,7 @@ const AppointmentDropdown = ({showDropdown, setShowDropdown, selectData, data, s
         onBlur={() => setShowDropdown(false)}
         onClick={() => setShowDropdown(!showDropdown)}>
 
-        <div className={`flex items-center justify-between border border-black/20 rounded-[10px] h-10 px-[10px] text-sm font-normal text-primary-text/40 ${showDropdown ? 'rounded-b-none border-b-0' : ''}`}>
+        <div className={`flex items-center justify-between border border-black/20 rounded-[10px] h-10 px-[10px] text-sm font-normal text-primary-text ${showDropdown ? 'rounded-b-none border-b-0' : ''}`}>
           {selectData}
           <span className={showDropdown ? 'rotate-180' : ''}>
             <BsChevronDown className="text-xl text-black" />

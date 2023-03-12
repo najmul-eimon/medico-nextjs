@@ -18,7 +18,7 @@ const Login = () => {
             </Link>
             <h2 className="pt-20 text-white lg:text-[23px] lg:leading-9 xl:text-2xl xl:leading-10 2xl:text-[40px] 2xl:leading-[60px] font-semibold">Welcome Back to medico doctor’s portal</h2>
           </div>
-          <p className="lg:pb-10 2xl:pb-20 text-white text-sm max-w-[385px]">Protected by reCAPTCHA and subject to the Medico Privacy Policy and Terms of Service.</p>
+          <p className="lg:pb-10 2xl:pb-16 text-white text-sm max-w-[385px]">Protected by reCAPTCHA and subject to the Medico Privacy Policy and Terms of Service.</p>
         </div>
 
         {/* right part */}

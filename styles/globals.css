@@ -241,7 +241,7 @@ a:focus {
 }
 
 .pricing-card.active a{
-  @apply py-[6px] md:py-[10px] border border-white;
+  @apply py-[11px] border border-white;
 }
 
 /* paginatioin */
