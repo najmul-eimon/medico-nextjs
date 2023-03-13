@@ -1,7 +1,7 @@
 export const histories = [
   {
     id: 1,
-    year: "2016-2017",
+    year: "2014-2015",
     subtitle: "Subtitle",
     launch: "Launch",
     fromColor: "#EB67A6",
@@ -9,7 +9,7 @@ export const histories = [
   },
   {
     id: 2,
-    year: "2017-2018",
+    year: "2016-2017",
     subtitle: "Subtitle",
     launch: "Launch",
     fromColor: "#5B6AD5",
@@ -25,7 +25,7 @@ export const histories = [
   },
   {
     id: 4,
-    year: "2019-2020",
+    year: "2020-2021",
     subtitle: "Subtitle",
     launch: "Launch",
     fromColor: "#F4AC5D",
@@ -33,7 +33,7 @@ export const histories = [
   },
   {
     id: 5,
-    year: "2020-2022",
+    year: "2022-2023",
     subtitle: "Subtitle",
     launch: "Launch",
     fromColor: "#C45BD5",
